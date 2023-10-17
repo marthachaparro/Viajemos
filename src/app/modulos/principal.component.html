@@ -1,12 +1,14 @@
 <app-header></app-header>
-<div class="w-100">
-     <app-nav></app-nav>
-     <div class="container-fluid"></div>
-     <main  class="bg-light py-3">
-
-        <div id="content" class="bg-grey w-100">
- 
-
-            <router-outlet></router-outlet>
+<div class="container-fluid"> 
+    <div class="row">
+        <div class="col-lg-2">
+            <app-nav></app-nav>
         </div>
-        </main>
+        <div class="col-lg-10">
+                <router-outlet></router-outlet>
+        </div>
+     
+     
+    </div>
+</div>
+

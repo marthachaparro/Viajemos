@@ -4,15 +4,21 @@ import { RouterModule, Routes } from '@angular/router';
 import { PrincipalComponent } from './modulos/principal.component';
 import { DashboardComponent } from './modulos/dashboard/dashboard.component';
 import { LoginComponent } from './modulos/login/login.component';
+import { ClienteComponent} from './modulos/cliente/cliente.component';
+
+import { UsuarioComponent } from './modulos/usuario/usuario.component';
 const routes: Routes = [
   {
   path: '', component: PrincipalComponent,
     children: [
       {path: 'dashboard', component: DashboardComponent},
-      {path: '', redirectTo: 'dahboard', pathMatch: 'full'},
+      {path: 'usuario', component: UsuarioComponent},
+      {path: 'cliente', component: ClienteComponent},
+
+      {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
     ]
   },
-  {path: 'login', component:LoginComponent },
+  {path: 'login', component: LoginComponent },
     ];
 
 @NgModule({

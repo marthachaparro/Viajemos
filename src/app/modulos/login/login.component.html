@@ -1,1 +1,50 @@
-<p>login works!</p>
+<div class="container">
+    <div class="form-box">
+        <div class="buttom-box">
+            <div id="elegir" style="left: 120px;"></div>
+            <button type="button" class="tonggle_btn" onclick="Login()">Iniciar Sesión </button>
+            <button type="button" class="tonggle_btn" onclick="Registrar()">Registrar</button>
+        </div>
+
+        <div class="redes-sociales">
+            <img src="../../../assets/img/logo-facebook-png.png" alt="Icono_Facebook">
+            <img src="../../../assets/img/gmail.png" alt="Icono_Gmail">
+        </div>
+
+        <form id="Login" class="input-group" style="left: -400px;">
+            <input type="text" class="input-field" placeholder="E-mail" required="">
+            <input type="password" class="input-field" placeholder="Contraseña" required="">
+            <input type="checkbox" class="check-box"><span class="recordar">Recordar Contraseña.</span>
+            <button type="submit" class="submit-btn">Acceder</button>
+        </form>
+
+        <form id="Registrar" class="input-group" style="left: 50px;">
+            <input type="text" class="input-field" placeholder="Nombre de Usuario" required="">
+            <input type="email" class="input-field" placeholder="Correo" required="">
+            <input type="password" class="input-field" placeholder="Contraseña" required="">
+            <input type="checkbox" class="check-box"><span>Acepto los Términos y Condiciones.</span>
+            <button type="submit" class="submit-btn">Registrar</button>
+              
+        </form>
+    </div>
+</div>
+
+<footer>2023</footer>
+
+<script>
+    var x = document.getElementById("Login");
+    var y = document.getElementById("Registrar");
+    var z = document.getElementById("elegir");
+
+    function Login(){
+        x.style.left = "50px";
+        y.style.left = "450px";
+        z.style.left = "0px";
+    }
+
+    function Registrar(){
+        x.style.left = "-400px";
+        y.style.left = "50px";
+        z.style.left = "120px";
+    }
+</script>

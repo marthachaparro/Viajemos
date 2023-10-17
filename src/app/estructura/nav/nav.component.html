@@ -1,31 +1,49 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-  <div class="container">
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <form class="form-inline position-relative d-inline-block my-2">
-        <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar">
-        <button class="btn position-absolute btn-search" type="submit"><i class="icon ion-md-search"></i></button>
-      </form>
-      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-        <li class="nav-item dropdown">
-          <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button"
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <img src="assets/img/user 2.PNG" class="img-fluid rounded-circle avatar mr-2">
-          Nombre del Usuario
+<div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary" style="width:100%">
+  <div class="offcanvas-md offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="sidebarMenuLabel">Viajes</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">
+            
+            Dashboard
           </a>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Mi cuenta</a>
-            <a class="dropdown-item" href="#">Mi Historial</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Cerrar Sesión</a>
-          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center gap-2" href="#">
+            
+            Orders
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center gap-2" href="#">
+           
+            Products
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center gap-2" href="#">
+            
+            Customers
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center gap-2" href="#">
+            
+            Reports
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center gap-2" href="#">
+            
+            Integrations
+          </a>
         </li>
       </ul>
+
     </div>
   </div>
-</nav>
+</div>

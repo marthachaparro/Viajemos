@@ -11,7 +11,8 @@ import { FooterComponent } from './estructura/footer/footer.component';
 import { PrincipalComponent } from './modulos/principal.component';
 import { DashboardComponent } from './modulos/dashboard/dashboard.component';
 import { LoginComponent } from './modulos/login/login.component';
-import { UsuariosComponent } from './modulos/usuarios/usuarios.component';
+import { UsuarioComponent } from './modulos/usuario/usuario.component';
+import { ClienteComponent } from './modulos/cliente/cliente.component';
 
 @NgModule({
   declarations: [
@@ -22,8 +23,11 @@ import { UsuariosComponent } from './modulos/usuarios/usuarios.component';
     PrincipalComponent,
     DashboardComponent,
     LoginComponent,
-    UsuariosComponent
+    UsuarioComponent,
+    UsuarioComponent,
+    ClienteComponent
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
