@@ -4,9 +4,9 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class UsuarioService {
+export class clienteService {
 
-url='http://localhost/viajes/src/app/cliente/';
+url='http://localhost/viajes/src/app/php/cliente/';
 
   constructor(private http:HttpClient) { }
 

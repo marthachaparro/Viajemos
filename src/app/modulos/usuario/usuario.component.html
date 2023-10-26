@@ -1,68 +1,122 @@
-<h1>USUARIOS<h1> 
-    
-  <div class="col-lg-6">
-    <input type="text" id="usuario"  class="form-control">
-  </div>
-    <button class="btn-primary" (click)="mostrar(1)">Insertar Usuario</button><br><br>
+<h1>
+  USUARIOS
+  </h1>
+    <button class="btn btn-primary" (click)="mostrar(1)">Insertar usuarios</button
+    ><br /><br />
     <div id="formulario" *ngIf="verf==true">
-     <div class="row">
-       <div class="col-lg-6">
-         <input type="text" id="usuario"  class="form-control">
-       </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <input
+            type="text"
+            id="usuario"
+            class="form-control"
+            [(ngModel)]="user.usuario"
+          />
 
-       <div class="col-lg-6">
-         <input type="email" id="usuario"  class="form-control">
+          <span style="color: red;" *ngIf="validusuario==false"
+            >Insertar Usuario</span
+          >
+        </div>
+
+        <div class="col-lg-6">
+          <input
+            type="password"
+            id="clave"
+            class="form-control"
+            [(ngModel)]="user.clave"
+          />
+          <span style="color: red;" *ngIf="validclave==false"
+            >Insertar Contraseña</span
+          >
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <input
+            type="email"
+            id="correo"
+            class="form-control"
+            [(ngModel)]="user.correo"
+          />
+          <span style="color: red;" *ngIf="validcorreo==false"
+            >Insertar Correo</span
+          >
+        </div>
+
+        <div class="col-lg-6">
+          <input
+            type="number"
+            id="celular"
+            class="form-control"
+            [(ngModel)]="user.celular"
+          />
+          <span style="color: red;" *ngIf="validcelular==false"
+            >Insertar Celular</span
+          >
+        </div>
+        <div class="row"></div>
+        <div class="col-lg-6">
+          <select id="tipo_usuario" class="form-control form-select" [(ngModel)]="user.tipo_usuario">
+         
+            <option value="Administrador" label="Administrador">
+              Administrador
+            </option>
+            <option value="General" label="General">Invitado</option>
+          </select>
+          
+          <span style="color: red;" *ngIf="validtipo_usuario==false"
+            >Elegir tipo de Usuario</span
+          >
         </div>
 
         <div class="row">
-        <div class="col-lg-6">
-         <input type="password" id="clave"  class="form-control">
-        </div> 
-
-       <div class="col-lg-6">
-         <select id="tipo">
-             <option value="Administrador" label="Administrador">Administrador</option> 
-             <option value="General" label="General">General</option>
-         </select>
-         </div>
+          <div class="col-lg-3">
+            <button class="btn btn-primary" (click)="ingresar()">
+              Guardar
+            </button>
+          </div>
+          <div class="col-lg-3">
+            <button class="btn btn-secondary" (click)="mostrar(0)">
+              Cancelar
+            </button>
+          </div>
         </div>
-      
-         <div class="row">
-             <div class="col-lg-3"></div>
-             <div class="col-lg-3">
-                <button class="btn btn-primary">Guardar</button>
-             </div>
-             <div class="col-lg-3">
-                <button class=" btn btn-secondary" (click)="mostrar(0)">Cancelar</button>
-             </div>
-             </div>
-             <div class="col-lg-3"></div>
+        <div class="col-lg-3"></div>
+      </div>
 
-       </div>
-        <div class="table-responsive">
-        <table class=" table table- success table-striped" border="1">
-        <tr>
-            <th>Usuario</th>
-            <th>Correo</th>
-            <th>Celular</th>
-            <th>Tipo_Usuario</th>
-            <th>Acciones</th>
+      <br />
 
-        </tr>
-        <!--mostrar los usuarios-->
+      <div class="table-responsive">
+        <table class="table table-striped table-bordered border-primary">
+          <thead class="table-dark text-white">
+            <tr>
+              <th>Usuario</th>
+              <th>Correo</th>
+              <th>Celular</th>
+              <th>Tipo_Usuario</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody class="table-success">
+            <tr *ngFor="let item of usuarios">
+              <td>{{ item.usuario }}</td>
+              <td>{{ item.correo }}</td>
+              <td>{{ item.celular }}</td>
+              <td>{{ item.tipo_usuario }}</td>
+              <td>
+                <span class="fas fa-edit editar" title="Editar"></span>
 
-        <tr *ngFor="let item of usuario">
-          
-            <td>{{item.usuario}}</td>
-            <td>{{item.correo}}</td>
-            <td>{{item.celular}}</td>
-            <td>{{item.tipo_usuario}}</td>
-            <td>
-                Editar
-                 -
-                Eliminar
-            </td>
-            
-        </tr>
+                <a (click)="pregunta(item.id_usuario, item.usuario)">
+                  <span
+                    class="fas fa-trash-alt eliminar"
+                    title="Eliminar"
+                  ></span>
+                </a>
+              </td>
+            </tr>
+          </tbody>
         </table>
       </div>
+    
+    
+  

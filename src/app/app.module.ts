@@ -24,7 +24,6 @@ import { ClienteComponent } from './modulos/cliente/cliente.component';
     DashboardComponent,
     LoginComponent,
     UsuarioComponent,
-    UsuarioComponent,
     ClienteComponent
   ],
   

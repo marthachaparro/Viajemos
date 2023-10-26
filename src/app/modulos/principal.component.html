@@ -1,14 +1,25 @@
-<app-header></app-header>
-<div class="container-fluid"> 
-    <div class="row">
-        <div class="col-lg-2">
-            <app-nav></app-nav>
-        </div>
-        <div class="col-lg-10">
-                <router-outlet></router-outlet>
-        </div>
-     
-     
-    </div>
-</div>
 
+<app-header></app-header>
+<aside class="bd-sidebar">
+    <main class="d-flex flex-nowrap">
+
+        <app-nav></app-nav>
+        <div class="b-example-divider b-example-vr"></div>
+
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-12 mb-5"></div>
+					<div class="col-12 mb-4"></div>
+					<div class="col-12 mb-3">
+						
+
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <router-outlet></router-outlet>
+					</div>
+
+
+                </div>
+            </div>
+        </div>
+    </main>
+</aside>
